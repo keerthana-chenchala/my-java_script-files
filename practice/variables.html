@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript">
+		//practice 1
+		var variable;
+		console.log(variable);//undefined
+		//practice 2
+		var specialchar;
+		console.log(specialchar);//invalid or unexpected token
+		//practice 3
+		var name="Keerthana";
+		var newvar="Hello"+" "+name;
+		console.log(newvar);//Hello Keerthana
+		//practice 4
+		var greet="Hello"+", "+name+"!";
+		console.log(greet);//Hello, Keerthana!
+		//practice 5
+		var hourlywage=10;
+		var number_of_hours=8;
+		var total_wages=hourlywage*number_of_hours;
+		console.log(total_wages);//80
+		//practice 6
+		var num=5;
+		var str="hai";
+		console.log(num+str);//the number and string come side by side
+		//practice 7
+		var amt=50.794654632435;
+		var rnd=Math.round(amt,2);
+		console.log(rnd);
+		//practice 8
+		var par="The is a paragraph!";
+		console.log("<p>"+par+"</p>");
+		//practice 9
+		var tweet = "hello world!";
+        var count = 0;
+        count = count + 10;
+        tweet = tweet + count;
+        // what is the value of tweet and count now?
+        console.log("tweet="+tweet+","+"count="+count);
+        count = count * 10;
+        tweet = count + tweet;
+
+        // what is the value of tweet and count now?
+        console.log("tweet="+tweet+","+"count="+count);
+        count = count * 100;
+        tweet = tweet + ". this is another sentence.";
+
+        // what is the value of tweet and count now?
+        console.log("tweet="+tweet+","+"count="+count);
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>
