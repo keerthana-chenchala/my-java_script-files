@@ -1,0 +1,69 @@
+//5. Create an array that only contains only the tweet texts that contain the word
+//"awesome" (upper or lower case). How many tweets are in the array?
+var ar=[];
+var text=tweets.filter(function(arr){
+	var text=arr.text.toLowerCase();
+	if(text.includes("awesome")){
+		ar.push(arr.text);
+	}
+})
+console.log(ar);
+
+//6. How many of the tweets contains URLs in them? (You can just look for "http:"
+//as a substring).
+var arr=[];
+var url=tweets.map(function(arg){
+	if(arg.user.url!=null){
+		arr.push(arg.user.url);
+	}
+})
+console.log(arr);
+
+
+
+//7. How many of the tweets are associated with users who have underscores ("_")
+//in their screen name?
+var array=[];
+var und=tweets.map(function(arg){
+	if(arg.user.screen_name.includes("_")){
+		 array.push(arg.user.screen_name);
+	}
+})
+console.log(array);
+
+
+//8. What is the screen name of the user with the most followers?
+var followers=tweets.map(function(arg){
+	return arg.user.followers_count;
+})
+console.log(followers);
+var d=followers.indexOf(Math.max(...followers));
+console.log(tweets[d].user.screen_name);
+
+//9. The "statuses_count" property of a user object contains the number of tweets
+//that the user has tweeted. How many users have tweeted exactly 1 tweet? What are
+//their screen names?
+
+var tweeted=tweets.filter(function(arg){
+	if(arg.user.statuses_count==1){
+		console.log(arg.user.screen_name);
+	}
+})
+
+//10. What is the average number of followers among those users associated with
+//tweets that contain "lol" (case insensitive)?
+var ar=[];
+var c=0;
+var twee=tweets.filter(function(arg){
+	if(arg.text.toLowerCase().includes("lol")){
+		ar.push(arg.user.followers_count);
+		c+=1;
+	}
+})
+console.log(ar);
+var avg=ar.reduce(function(t,a){
+	return t+a;
+},0)
+console.log(Math.floor(avg/c));
+
+
